@@ -1,0 +1,30 @@
+{
+  "name": "tomgrohl/laravel4-php71-encrypter",
+  "description": "Laravel 4.2 Encrypter for PHP 7.1+",
+  "keywords": ["encryption", "laravel"],
+  "license": "MIT",
+  "type": "project",
+  "config": {
+    "preferred-install": "dist",
+    "bin-dir": "bin",
+    "process-timeout": 10000,
+    "github-protocols": ["https"]
+  },
+  "require": {
+    "php": "~7.1.0"
+  },
+  "require-dev": {
+    "laravel/laravel": "~4.2.0",
+    "phpunit/phpunit": "~4.0|~5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tomgrohl\\Laravel\\Encryption\\": "src/Tomgrohl/Laravel/Encryption/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
