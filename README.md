@@ -2,7 +2,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/tomgrohl/laravel4-php71-encrypter/v/unstable)](https://packagist.org/packages/tomgrohl/laravel4-php71-encrypter)
 [![License](https://poser.pugx.org/tomgrohl/laravel4-php71-encrypter/license)](https://packagist.org/packages/tomgrohl/laravel4-php71-encrypter)
 
-# Laravel 4.2 for PHP 7.1+
+# Laravel 4.2 Encrypter for PHP 7.1+
 
 A port of the Laravel 5.4 Encrypter for 4.2 with PHP 7.1 support.
 
@@ -37,3 +37,12 @@ Cipher must either be 'AES-256-CBC' with a key length of 32
 
 
 ### 3.  You're good to go!
+
+
+# Credits
+
+- Peter Fritchley - Fellow co-worker that wrote this originally for a project
+
+# License
+
+MIT
