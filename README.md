@@ -36,4 +36,4 @@ OR
 Cipher must either be 'AES-256-CBC' with a key length of 32
 
 
-### 3.  Your good to go!
+### 3.  You're good to go!
