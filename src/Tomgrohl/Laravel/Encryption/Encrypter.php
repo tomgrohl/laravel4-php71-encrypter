@@ -8,6 +8,8 @@ use Illuminate\Encryption\Encrypter as BaseEncrypter;
 /**
  * Class Encrypter
  *
+ * A port of the Laravel 5.4 Encrypter for 4.2 with PHP 7.1 support
+ *
  * @package Tomgrohl\Laravel\Encryption
  */
 class Encrypter extends BaseEncrypter
