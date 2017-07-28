@@ -10,6 +10,8 @@ Due to mcrypt being deprecated in 7.1 you can't run Laravel 4.2 under PHP 7.1 wi
 
 This package adds a PHP 7.1+ Encrypter for Laravel 4.2
 
+> **Note:** Backward compatibility has been added in version 1.1.0 for PHP 5.6+ to make upgrading easier
+
 ## Installation
 
 You can install it using composer:
