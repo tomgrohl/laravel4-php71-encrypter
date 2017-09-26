@@ -28,6 +28,6 @@ class EncryptionServiceProvider extends ServiceProvider
             return $encrypter;
         });
 
-        $this->app->alias(Encrypter::class, 'encrypter');
+        $this->app->alias('encrypter', Encrypter::class);
     }
 }
