@@ -3,7 +3,7 @@
   "description": "Laravel 4.2 Encrypter for PHP 7.1+",
   "keywords": ["encryption", "laravel"],
   "license": "MIT",
-  "type": "project",
+  "type": "library",
   "config": {
     "preferred-install": "dist",
     "bin-dir": "bin",
