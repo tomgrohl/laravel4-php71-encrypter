@@ -3,6 +3,7 @@
 namespace Tomgrohl\Laravel\Encryption;
 
 use Illuminate\Encryption\DecryptException;
+use Illuminate\Encryption\Encrypter as BaseEncrypter;
 
 /**
  * Class Encrypter
@@ -11,22 +12,8 @@ use Illuminate\Encryption\DecryptException;
  *
  * @package Tomgrohl\Laravel\Encryption
  */
-class Encrypter
+class Encrypter extends BaseEncrypter
 {
-    /**
-     * The encryption key.
-     *
-     * @var string
-     */
-    protected $key;
-
-    /**
-     * The algorithm used for encryption.
-     *
-     * @var string
-     */
-    protected $cipher;
-
     /**
      * Encrypter constructor.
      *
@@ -35,7 +22,7 @@ class Encrypter
      */
     public function __construct($key, $cipher = 'AES-128-CBC')
     {
-        $this->key = (string) $key;
+        parent::__construct($key);
 
         $this->cipher = $cipher;
 
@@ -57,47 +44,6 @@ class Encrypter
 
         return ($cipher === 'AES-128-CBC' && $length === 16) ||
             ($cipher === 'AES-256-CBC' && $length === 32);
-    }
-
-    /**
-     * Set the encryption key.
-     *
-     * @param  string  $key
-     * @return void
-     */
-    public function setKey($key)
-    {
-        $this->key = (string) $key;
-    }
-
-    /**
-     * Get the encryption key.
-     *
-     * @return string
-     */
-    public function getKey()
-    {
-        return $this->key;
-    }
-
-    /**
-     * Set the encryption cipher.
-     *
-     * @param string $cipher
-     */
-    public function setCipher($cipher)
-    {
-        $this->cipher = $cipher;
-    }
-
-    /**
-     * Get the encryption cipher.
-     *
-     * @return string
-     */
-    public function getCipher()
-    {
-        return $this->cipher;
     }
 
     /**
@@ -256,5 +202,15 @@ class Encrypter
         return hash_hmac(
             'sha256', $this->hash($payload['iv'], $payload['value']), $bytes, true
         );
+    }
+
+    /**
+     * Get the encryption key.
+     *
+     * @return string
+     */
+    public function getKey()
+    {
+        return $this->key;
     }
 }
